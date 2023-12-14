@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/tga"
+        app:title="The Game Awards 2023"
+        app:titleTextColor="#000000">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:contentDescription="profile"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:onClick="openProfile"
+            app:srcCompat="@drawable/ic_baseline_manage_accounts_24"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="323dp"
+        android:layout_height="0dp"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Olá"
+                />
+
+
+
+
+            <TextView
+                android:id="@+id/favGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Jogo favorito de 2023: " />
+
+
+
+            <TextView
+                android:id="@+id/gameOfTheYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="GAME OF THE YEAR" />
+
+            <ImageView
+                android:id="@+id/imageGoty"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/baldurs_gate_3" />
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameGoty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:text="BALDURS GATE 3" />
+
+                    <ImageView
+                        android:id="@+id/eyeGoty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/bestGameDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST GAME DIRECTION" />
+
+            <ImageView
+                android:id="@+id/imageBestGameDirection"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/alanwake2_5" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameBestGameDirection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ALAN WAKE 2" />
+
+                    <ImageView
+                        android:id="@+id/eyeDirection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/bestNarrative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST NARRATIVE" />
+
+            <ImageView
+                android:id="@+id/imageBestNarrative"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/alanwake2_5" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameBestNarrative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ALAN WAKE 2" />
+
+                    <ImageView
+                        android:id="@+id/eyeNarrative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/bestIndieGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST INDEPENDENT GAME" />
+
+            <ImageView
+                android:id="@+id/imageIndieGame"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/sea_of_stars_1" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameIndieGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SEA OF STARS" />
+
+                    <ImageView
+                        android:id="@+id/eyeIndie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+
+            <TextView
+                android:id="@+id/bestOngoingGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST ONGOING" />
+
+            <ImageView
+                android:id="@+id/imageOngoingGame"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/cyberpunk_phantom_liberty_1" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameOngoingGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CYBERPUNK 2077" />
+
+
+                    <ImageView
+                        android:id="@+id/eyeOngoing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/bestRpg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST RPG" />
+
+            <ImageView
+                android:id="@+id/imageBestRpg"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/baldurs_gate_3" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameBestRpg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BALDUR'S GATE 3" />
+
+
+                    <ImageView
+                        android:id="@+id/eyeRpg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/bestFighting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST FIGHTING" />
+
+            <ImageView
+                android:id="@+id/imageBestFighting"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/street_fighter_6_1" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameBestFigthing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STREET FIGHTER 6" />
+
+
+                    <ImageView
+                        android:id="@+id/eyeFigthing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/bestMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST MOBILE" />
+
+            <ImageView
+                android:id="@+id/imageBestMobile"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/honkai_star_rail" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameBestMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HONKAI: STAR RAIL" />
+
+
+                    <ImageView
+                        android:id="@+id/eyeMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/mostAnticipatedGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="MOST ANTICIPATED GAME" />
+
+            <ImageView
+                android:id="@+id/imageMostAnticipatedGame"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/final_fantasy_vii_rebirth" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameMostAnticipatedGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FINAL FANTASY VII REBIRTH" />
+
+
+                    <ImageView
+                        android:id="@+id/eyeAnticipated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/bestEsportsGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="BEST ESPORTS GAME" />
+
+            <ImageView
+                android:id="@+id/imageBestEsportsGame"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/valorant_1" />
+
+
+            <TableLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/nameBestEsportsGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="VALORANT" />
+
+
+                    <ImageView
+                        android:id="@+id/eyeEsports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
